@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import MoviesList from './MoviesList';
+import Seats from './Seats';
+import AddMovie from './AddMovie';
 
-function App() {
+import Header from './Header';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+import './App.css';
+import React, { Component, useState, useEffect, useContext } from 'react';
+
+import moviesList from './data.json';
+import MoviesListContext from "./MovieListContext";
+
+
+export default function App() {
+  const [movies, setMoviesList] = useState(moviesList)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <MoviesListContext.Provider value={[movies ,setMoviesList] }>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={MoviesList} />
+            <Route exact path="/AddMovie" component={AddMovie} />
+            <Route exact path="/Seats" component={Seats} />
+          </Switch>
+        </Router>
+      </MoviesListContext.Provider>
+
     </div>
+
   );
 }
 
-export default App;
+

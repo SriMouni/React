@@ -1,0 +1,45 @@
+[
+        { 
+            "id":1,
+            "name": "Radhey Shaym", 
+            "image": "assets/radhe_shaym.jpg",
+            "seats":"150"
+        },
+        { 
+            "id":2,
+            "name": "Jatiratnalu", 
+            "image": "assets/Jathi_Ratnalu_poster.jpg",
+            "seats":"200"
+    
+        },
+        { 
+            "id":3,
+            "name": "Sarileru Nekavaru", 
+            "image": "assets/sarileru.jpg",
+            "seats":"100"
+    
+        },
+        { 
+            "id":4,
+            "name": "Srikaram", 
+            "image": "assets/srikaram.jpg",
+            "seats":"120"
+    
+        },
+        { 
+            "id":5,
+            "name": "Gaali sampath", 
+            "image": "assets/gali.jpg",
+            "seats":"160"
+    
+        },
+        { 
+            "id":6,
+            "name": "Uppena", 
+            "image": "assets/uppena.jpg",
+            "seats":"110"
+    
+        }
+        
+       
+      ]
